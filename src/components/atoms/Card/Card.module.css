@@ -1,0 +1,26 @@
+.card {
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px #ccc;
+  color: #253b56;
+  margin: 12px 0px;
+}
+
+.cardContent {
+  padding: 4px 16px 20px 16px;
+}
+
+.cardTitle {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 12px 0px 0px 0px;
+}
+
+.description {
+  font-size: 0.9rem;
+  margin: 8px 0 0 0;
+}
+
+.link {
+  cursor: pointer;
+}
