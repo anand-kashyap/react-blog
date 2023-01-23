@@ -1,0 +1,25 @@
+.comment {
+  max-width: 100%;
+  background-color: #fff;
+  border: 1px solid #bfbfbf;
+  margin: 5px 0;
+  margin-left: 5vw;
+  border-radius: 5px;
+  padding: 10px;
+}
+.commentHeading {
+  padding: 10px 0;
+  font-size: 14px;
+}
+.commentAuthor {
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0;
+}
+.commentAuthor:hover {
+  text-decoration: underline;
+}
+
+.commentBody {
+  margin: 0;
+}

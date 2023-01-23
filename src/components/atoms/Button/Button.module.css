@@ -1,0 +1,82 @@
+:root {
+  --primary-btn: #2ecc71;
+  --primary-hover-btn: #27ae60;
+  --secondary-btn: #e67e22;
+  --secondary-hover-btn: #d35400;
+  --tertiary-btn: #e74c3c;
+  --tertiary-hover-btn: #c0392b;
+}
+
+.button {
+  position: relative;
+
+  display: block;
+  margin: 30px auto;
+  padding: 0;
+
+  overflow: hidden;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+
+  background-color: var(--primary-btn);
+  color: #ecf0f1;
+
+  transition: background-color 0.3s;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--primary-hover-btn);
+}
+
+.button > * {
+  position: relative;
+}
+
+.button span {
+  display: block;
+  padding: 12px 24px;
+}
+
+.button:before {
+  content: '';
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: block;
+  width: 0;
+  padding-top: 0;
+  border-radius: 100%;
+  background-color: rgba(236, 240, 241, 0.3);
+  transform: translate(-50%, -50%);
+}
+
+.button:active:before {
+  width: 120%;
+  padding-top: 120%;
+
+  transition: width 0.2s ease-out, padding-top 0.2s ease-out;
+}
+
+.button.secondary {
+  background-color: var(--secondary-btn);
+}
+
+.button.secondary:hover,
+.button.secondary:focus {
+  background-color: var(--secondary-hover-btn);
+}
+
+.button.tertiary {
+  background-color: var(--tertiary-btn);
+}
+
+.button.tertiary:hover,
+.button.tertiary:focus {
+  background-color: var(--tertiary-hover-btn);
+}

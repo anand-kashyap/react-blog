@@ -1,13 +1,7 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '../../redux/store';
 import { getPosts } from '../../services/getPosts';
-
-export type Post = {
-  userId: number;
-  id: number;
-  title: string;
-  body: string;
-};
+import { Post } from '../../types';
 
 export interface PostsState {
   data: Post[];
@@ -21,9 +15,7 @@ const initialState: PostsState = {
 
 export const fetchPosts = createAsyncThunk('posts/fetchPosts', async () => {
   const response = await getPosts();
-  // console.log('fetchPosts -> response', response.data);
-  // The value we return becomes the `fulfilled` action payload
-  return response.data.slice(0, 10);
+  return response.data.slice(0, 10); // todo - update later
 });
 
 export const postsSlice = createSlice({
