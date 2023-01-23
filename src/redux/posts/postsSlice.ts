@@ -13,9 +13,12 @@ const initialState: PostsState = {
   status: 'idle',
 };
 
-export const fetchPosts = createAsyncThunk('posts/fetchPosts', async () => {
+export const fetchPosts = createAsyncThunk('posts/fetchPosts', async (searchTerm?: string) => {
   const response = await getPosts();
-  return response.data.slice(0, 10); // todo - update later
+  if (searchTerm) {
+    return response.data.filter((post) => post.title.includes(searchTerm));
+  }
+  return response.data.slice(0, 10);
 });
 
 export const postsSlice = createSlice({

@@ -1,0 +1,8 @@
+.blogHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.blogHeader > h1 {
+  margin: 0;
+}
